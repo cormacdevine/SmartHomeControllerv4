@@ -115,6 +115,7 @@ public class Program
     {
         while (true)
         {           
+            Console.Clear();
             Console.WriteLine("Main Menu:");
             Console.WriteLine("1. Install new device");
             Console.WriteLine("2. Control a device");
@@ -127,7 +128,7 @@ public class Program
             switch (choice)
             {
                 case "1":
-                    //InstallDeviceMenu();
+                    InstallDeviceMenu();
                     break;
                 case "2":
                     //ControlDevicesMenu();
@@ -145,5 +146,47 @@ public class Program
     }
 
 
+    public static void InstallDeviceMenu() 
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("Install a device menu");
+            Console.WriteLine("1. Install a new smartLight");
+            Console.WriteLine("2. Install a new smartSecurityCamera");
+            Console.WriteLine("Return to main menu");
+            Console.WriteLine("Please choose an option (1-3)");
+
+            string choice = Console.ReadLine();
+            switch (choice) 
+            {
+                case "1":
+                    InstallSmartLightMenu();
+                    break;
+                case "2": 
+                    break;
+                case "3":
+                    return;
+                    
+            }
+        }
+         
+    }
+
+    public static void InstallSmartLightMenu() 
+    {
+        Console.WriteLine("\nInstall SmartLight");
+        Console.WriteLine("Enter deviceID");
+        int deviceID = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("\nEnter device Name");
+        string deviceName = Console.ReadLine();
+
+        Console.WriteLine("\nEnter light brightness");
+        double brightness = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("\nEnter light colour");
+        string colour = Console.ReadLine(); 
+    }
 
 }
