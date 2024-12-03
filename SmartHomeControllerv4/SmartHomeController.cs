@@ -1,5 +1,6 @@
 ﻿using SmartHomeController;
 using System.Net.NetworkInformation;
+using System.Runtime.CompilerServices;
 
 public class Program
 {
@@ -187,6 +188,10 @@ public class Program
 
         Console.WriteLine("\nEnter light colour");
         string colour = Console.ReadLine(); 
+
+        SmartLight smartLight = new SmartLight(deviceID, deviceName, brightness, colour);
+
+        devices.Add(smartLight);
     }
 
 }
